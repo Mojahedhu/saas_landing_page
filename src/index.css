@@ -73,7 +73,7 @@
   }
 
   body {
-    @apply font-poppins text-[16px] tracking-[-0.03em] text-p5;
+    @apply font-poppins text-p5 text-[16px] tracking-[-0.03em];
   }
 
   a {
@@ -107,31 +107,31 @@
 
 /* ---------- START of Typography ---------- */
 @utility h-num {
-  @apply font-inter text-[72px] font-bold leading-21;
+  @apply font-inter text-[72px] leading-21 font-bold;
 }
 
 @utility h1 {
-  @apply text-[84px] font-black leading-21 tracking-[-0.03em];
+  @apply text-[84px] leading-21 font-black tracking-[-0.03em];
 }
 
 @utility h2 {
-  @apply text-[64px] font-black leading-[64px];
+  @apply text-[64px] leading-[64px] font-black;
 }
 
 @utility h3 {
-  @apply text-[48px] font-semibold leading-[56px] tracking-[-0.02em];
+  @apply text-[48px] leading-[56px] font-semibold tracking-[-0.02em];
 }
 
 @utility h4 {
-  @apply text-[40px] font-semibold leading-[52px];
+  @apply text-[40px] leading-[52px] font-semibold;
 }
 
 @utility h5 {
-  @apply text-[32px] font-semibold leading-[40px];
+  @apply text-[32px] leading-[40px] font-semibold;
 }
 
 @utility h6 {
-  @apply text-[24px] font-medium leading-[36px];
+  @apply text-[24px] leading-[36px] font-medium;
 }
 
 @utility body-1 {
@@ -139,7 +139,7 @@
 }
 
 @utility body-2 {
-  @apply text-[18px] font-semibold leading-[32px];
+  @apply text-[18px] leading-[32px] font-semibold;
 }
 
 @utility body-3 {
@@ -147,27 +147,27 @@
 }
 
 @utility base {
-  @apply text-[16px] font-medium leading-[24px] tracking-[0.03em];
+  @apply text-[16px] leading-[24px] font-medium tracking-[0.03em];
 }
 
 @utility base-bold {
-  @apply text-[16px] font-bold leading-[24px];
+  @apply text-[16px] leading-[24px] font-bold;
 }
 
 @utility base-small {
-  @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+  @apply text-[14px] leading-[18px] font-semibold tracking-[0.03em];
 }
 
 @utility small-1 {
-  @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+  @apply text-[14px] leading-[18px] font-semibold tracking-[0.03em];
 }
 
 @utility small-2 {
-  @apply text-[12px] font-bold leading-[16px] tracking-[0.3em];
+  @apply text-[12px] leading-[16px] font-bold tracking-[0.3em];
 }
 
 @utility small-compact {
-  @apply text-[12px] font-semibold leading-[18px] tracking-[0.03em];
+  @apply text-[12px] leading-[18px] font-semibold tracking-[0.03em];
 }
 /* ---------- END of Typography ---------- */
 
@@ -221,7 +221,7 @@
 }
 
 @utility caption {
-  @apply small-2 mb-5 uppercase text-p3;
+  @apply small-2 text-p3 mb-5 uppercase;
 }
 
 @utility scroll-hide {
@@ -248,17 +248,17 @@
 }
 
 @utility dot {
-  @apply size-1.5 rounded-full bg-p2 max-lg:hidden;
+  @apply bg-p2 size-1.5 rounded-full max-lg:hidden;
 }
 
 @utility sidebar-before {
-  @apply max-lg:before:absolute max-lg:before:-right-64 max-lg:before:top-2/5 max-lg:before:h-440 max-lg:before:w-63 max-lg:before:bg-s4 max-lg:before:blur-[200px] max-lg:before:content-[''];
+  @apply max-lg:before:bg-s4 max-lg:before:absolute max-lg:before:top-2/5 max-lg:before:-right-64 max-lg:before:h-440 max-lg:before:w-63 max-lg:before:blur-[200px] max-lg:before:content-[''];
 }
 /* ---------- END of Header ---------- */
 
 /* ---------- START of Hero ---------- */
 @utility hero-img_res {
-  @apply max-lg:-top-40 max-lg:left-[calc(50%-280px)] max-lg:w-[1160px] max-md:bottom-[-590px] max-md:left-[calc(50%-390px)] max-md:top-auto;
+  @apply max-lg:-top-40 max-lg:left-[calc(50%-280px)] max-lg:w-290 max-md:top-auto max-md:-bottom-147.5 max-md:left-[calc(50%-390px)];
 }
 /* ---------- END of Hero ---------- */
 
@@ -268,7 +268,7 @@
 }
 
 @utility glow-before {
-  @apply before:g8 before:absolute before:left-2/5 before:top-0 before:z-4 before:h-0.5 before:w-3/5 before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:left-4 group-hover:before:opacity-40;
+  @apply before:g8 before:absolute before:top-0 before:left-2/5 before:z-4 before:h-0.5 before:w-3/5 before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:left-4 group-hover:before:opacity-40;
 }
 
 @utility glow-after {
@@ -278,21 +278,21 @@
 
 /* ---------- START of Feature ---------- */
 @utility feature-after {
-  @apply after:g1 after:absolute after:right-0 after:top-0 after:h-full after:w-1/2 after:mix-blend-soft-light after:content-[''] max-md:after:hidden;
+  @apply after:g1 after:absolute after:top-0 after:right-0 after:h-full after:w-1/2 after:mix-blend-soft-light after:content-[''] max-md:after:hidden;
 }
 /* ---------- END of Feature ---------- */
 
 /* ---------- START of Pricing ---------- */
 @utility pricing-head_before {
-  @apply before:absolute before:-bottom-44 before:left-1/5 before:h-96 before:w-13/20 before:bg-s4/50 before:blur-[200px] before:content-[''];
+  @apply before:bg-s4/50 before:absolute before:-bottom-44 before:left-1/5 before:h-96 before:w-13/20 before:blur-[200px] before:content-[''];
 }
 
 @utility pricing-head_btn {
-  @apply base-bold relative z-2 h-16 flex-1 uppercase text-p5 transition-colors duration-500 hover:text-p4;
+  @apply base-bold text-p5 hover:text-p4 relative z-2 h-16 flex-1 uppercase transition-colors duration-500;
 }
 
 @utility pricing-head_btn_before {
-  @apply before:absolute before:-top-16 before:left-9 before:right-9 before:bg-s4 before:blur-xl before:content-[""];
+  @apply before:bg-s4 before:absolute before:-top-16 before:right-9 before:left-9 before:blur-xl before:content-[""];
 }
 
 @utility pricing-bg {
@@ -300,11 +300,11 @@
 }
 
 @utility pricing-plan_first {
-  @apply first:rounded-bl-3xl first:rounded-tl-3xl lg:first:border-r-0;
+  @apply first:rounded-tl-3xl first:rounded-bl-3xl lg:first:border-r-0;
 }
 
 @utility pricing-plan_last {
-  @apply last:rounded-br-3xl last:rounded-tr-3xl lg:last:border-l-0;
+  @apply last:rounded-tr-3xl last:rounded-br-3xl lg:last:border-l-0;
 }
 
 @utility pricing-plan_odd {
@@ -312,21 +312,21 @@
 }
 
 @utility pricing-plan_even {
-  @apply even:g7 even:rounded-bl-3xl even:rounded-br-3xl even:rounded-tl-3xl even:rounded-tr-3xl even:border-s4;
+  @apply even:g7 even:border-s4 even:rounded-tl-3xl even:rounded-tr-3xl even:rounded-br-3xl even:rounded-bl-3xl;
 }
 /* ---------- END of Pricing ---------- */
 
 /* ---------- START of FAQ ---------- */
 @utility faq-line_after {
-  @apply after:absolute after:-top-1.5 after:left-[calc(50%-5px)] after:z-4 after:size-2.5 after:rounded-half after:border-2 after:border-s2 after:bg-s1 after:content-[''];
+  @apply after:rounded-half after:border-s2 after:bg-s1 after:absolute after:-top-1.5 after:left-[calc(50%-5px)] after:z-4 after:size-2.5 after:border-2 after:content-[''];
 }
 
 @utility faq-glow_before {
-  @apply before:absolute before:left-[calc(50%-160px)] before:top-[-160px] before:size-[320px] before:bg-s4/25 before:mix-blend-soft-light before:blur-[200px] before:content-[''];
+  @apply before:bg-s4/25 before:absolute before:top-[-160px] before:left-[calc(50%-160px)] before:size-[320px] before:mix-blend-soft-light before:blur-[200px] before:content-[''];
 }
 
 @utility faq-icon {
-  @apply before:absolute before:h-0.5 before:w-3 before:bg-p3 before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:bg-p3 after:transition-all after:duration-500 after:content-[''];
+  @apply before:bg-p3 after:bg-p3 before:absolute before:h-0.5 before:w-3 before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:transition-all after:duration-500 after:content-[''];
 }
 /* ---------- END of FAQ ---------- */
 
@@ -336,25 +336,25 @@
 }
 
 @utility testimonials_inner-before {
-  @apply before:pointer-events-none before:absolute before:-top-28 before:left-[calc(50%-1px)] before:h-[calc(100%+218px)] before:w-0.5 before:bg-s2 before:content-[''] before:max-lg:top-0 before:max-lg:h-full before:max-md:hidden;
+  @apply before:bg-s2 before:pointer-events-none before:absolute before:-top-28 before:left-[calc(50%-1px)] before:h-[calc(100%+218px)] before:w-0.5 before:content-[''] before:max-lg:top-0 before:max-lg:h-full before:max-md:hidden;
 }
 
 @utility testimonials_inner-after {
-  @apply after:pointer-events-none after:absolute after:-bottom-52 after:left-[calc(50%-1px)] after:h-24 after:w-0.5 after:bg-s5 after:content-[''] after:max-lg:-bottom-24 after:max-md:hidden;
+  @apply after:bg-s5 after:pointer-events-none after:absolute after:-bottom-52 after:left-[calc(50%-1px)] after:h-24 after:w-0.5 after:content-[''] after:max-lg:-bottom-24 after:max-md:hidden;
 }
 
 @utility testimonials_group-after {
-  @apply after:pointer-events-none after:absolute after:-bottom-[212px] after:left-[calc(50%-5px)] after:z-2 after:size-2.5 after:rounded-half after:border-2 after:border-s5 after:bg-s1 after:content-[''] max-lg:after:-bottom-[102px] max-md:after:hidden;
+  @apply after:rounded-half after:border-s5 after:bg-s1 after:pointer-events-none after:absolute after:-bottom-[212px] after:left-[calc(50%-5px)] after:z-2 after:size-2.5 after:border-2 after:content-[''] max-lg:after:-bottom-[102px] max-md:after:hidden;
 }
 /* ---------- END of Testimonials ---------- */
 
 /* ---------- START of Download ---------- */
 @utility download_tech-link_last-before {
-  @apply last:relative last:before:pointer-events-none last:before:absolute last:before:left-full last:before:top-[calc(50%-1px)] last:before:mr-6 last:before:h-0.5 last:before:w-[140px] last:before:bg-s5 last:before:content-[''] last:before:max-xl:w-[105px] last:before:max-lg:w-[80px] last:before:max-md:hidden;
+  @apply last:before:bg-s5 last:relative last:before:pointer-events-none last:before:absolute last:before:top-[calc(50%-1px)] last:before:left-full last:before:mr-6 last:before:h-0.5 last:before:w-[140px] last:before:content-[''] last:before:max-xl:w-[105px] last:before:max-lg:w-[80px] last:before:max-md:hidden;
 }
 
 @utility download_tech-link_last-after {
-  @apply last:after:pointer-events-none last:after:absolute last:after:left-[223px] last:after:top-[calc(50%-5px)] last:after:z-2 last:after:size-2.5 last:after:rounded-half last:after:border-2 last:after:border-s5 last:after:bg-s1 last:after:content-[''] last:after:max-xl:left-[187px] last:after:max-lg:left-[163px] last:after:max-md:hidden;
+  @apply last:after:rounded-half last:after:border-s5 last:after:bg-s1 last:after:pointer-events-none last:after:absolute last:after:top-[calc(50%-5px)] last:after:left-[223px] last:after:z-2 last:after:size-2.5 last:after:border-2 last:after:content-[''] last:after:max-xl:left-[187px] last:after:max-lg:left-[163px] last:after:max-md:hidden;
 }
 
 @utility download_tech-icon {
@@ -362,7 +362,7 @@
 }
 
 @utility download_tech-icon_before {
-  @apply before:absolute before:inset-1.5 before:rounded-half before:bg-s2 before:content-[''] hover:border-s4;
+  @apply before:rounded-half before:bg-s2 hover:border-s4 before:absolute before:inset-1.5 before:content-[''];
 }
 
 /* v3: .download_tech-link:hover .download_tech-icon svg path { fill-p1 } */
@@ -381,17 +381,17 @@
 }
 
 @utility download_preview-dot {
-  @apply absolute top-6 size-2.5 rounded-half;
+  @apply rounded-half absolute top-6 size-2.5;
 }
 /* ---------- END of Download ---------- */
 
 /* ---------- START of Footer ---------- */
 @utility legal-after {
-  @apply after:absolute after:-right-5 after:top-[calc(50%-1px)] after:h-0.5 after:w-0.5 after:rounded-half after:bg-p2 after:content-[''];
+  @apply after:rounded-half after:bg-p2 after:absolute after:top-[calc(50%-1px)] after:-right-5 after:h-0.5 after:w-0.5 after:content-[''];
 }
 
 @utility social-icon {
-  @apply flex size-10 items-center justify-center rounded-full border-2 border-s4/25 bg-s1/5 transition-all duration-500 hover:border-s4;
+  @apply border-s4/25 bg-s1/5 hover:border-s4 flex size-10 items-center justify-center rounded-full border-2 transition-all duration-500;
 }
 /* ---------- END of Footer ---------- */
 
