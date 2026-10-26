@@ -25,9 +25,14 @@ const Header = () => {
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
-        <a href="" className="z-2 flex-1 cursor-pointer lg:hidden">
+        <NavLink
+          to="hero"
+          href=""
+          setIsOpen={setIsOpen}
+          className="z-2 flex-1 cursor-pointer lg:hidden"
+        >
           <img src="/images/xora.svg" alt="logo" height={55} width={115} />
-        </a>
+        </NavLink>
         <div
           className={clsx(
             "max-lg:bg-s2 w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:opacity-0",
@@ -38,14 +43,27 @@ const Header = () => {
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
-                  <NavLink to={"features"} smooth spy children="features" />
+                  <NavLink
+                    to={"features"}
+                    setIsOpen={setIsOpen}
+                    children="features"
+                    activeClass="nav-active"
+                    offset={-100}
+                  />
                   <div className="dot" />
-                  <NavLink to="" children="pricing" />
+                  <NavLink
+                    to={"pricing"}
+                    setIsOpen={setIsOpen}
+                    children="pricing"
+                    activeClass="nav-active"
+                    offset={-100}
+                  />
                 </li>
 
                 <li className="nav-logo">
                   <NavLink
-                    to=""
+                    to="hero"
+                    offset={-250}
                     className={clsx(
                       "cursor-pointer transition-transform duration-500 max-lg:hidden",
                     )}
@@ -60,9 +78,21 @@ const Header = () => {
                 </li>
 
                 <li className="nav-li">
-                  <NavLink to="" children="faq" />
+                  <NavLink
+                    to=""
+                    setIsOpen={setIsOpen}
+                    children="faq"
+                    activeClass="nav-active"
+                    offset={-100}
+                  />
                   <div className="dot" />
-                  <NavLink to="" children="download" />
+                  <NavLink
+                    to=""
+                    setIsOpen={setIsOpen}
+                    children="download"
+                    activeClass="nav-active"
+                    offset={-100}
+                  />
                 </li>
               </ul>
             </nav>
