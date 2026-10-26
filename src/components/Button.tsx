@@ -31,6 +31,7 @@ const Button = ({
     </a>
   ) : (
     <button
+      type="button"
       onClick={onClick}
       className={clsx(
         "g5 shadow-500 group relative rounded-2xl p-0.5",
