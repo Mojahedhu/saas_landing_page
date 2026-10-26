@@ -236,7 +236,7 @@
 
 /* ---------- START of Header ---------- */
 @utility nav-active {
-  @apply text-p3;
+  @apply text-p3!;
 }
 
 @utility nav-li {

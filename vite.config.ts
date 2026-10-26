@@ -10,4 +10,7 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
+  optimizeDeps: {
+    include: ["react-countup"],
+  },
 });
