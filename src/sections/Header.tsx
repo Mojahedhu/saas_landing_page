@@ -25,7 +25,12 @@ const Header = () => {
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
-        <NavLink to="hero" className="z-2 flex-1 cursor-pointer lg:hidden">
+        <NavLink
+          to="hero"
+          href=""
+          setIsOpen={setIsOpen}
+          className="z-2 flex-1 cursor-pointer lg:hidden"
+        >
           <img src="/images/xora.svg" alt="logo" height={55} width={115} />
         </NavLink>
         <div

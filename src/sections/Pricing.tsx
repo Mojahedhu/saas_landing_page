@@ -23,6 +23,7 @@ const Pricing = () => {
             <div className="border-s4/25 bg-s1/50 relative z-4 mx-auto flex w-93.75 rounded-3xl border-[3px] p-2 backdrop-blur-[6px] max-md:w-77.5">
               <button
                 className={clsx("pricing-head_btn", monthly && "text-p4")}
+                aria-pressed={monthly}
                 onClick={() => {
                   setMonthly(true);
                 }}
@@ -32,6 +33,7 @@ const Pricing = () => {
 
               <button
                 className={clsx("pricing-head_btn", !monthly && "text-p4")}
+                aria-pressed={!monthly}
                 onClick={() => {
                   setMonthly(false);
                 }}

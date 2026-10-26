@@ -16,7 +16,7 @@ const NavLink = ({
       {...rest}
       smooth
       spy
-      className={`base-bold text-p4 hover:text-p1 cursor-pointer uppercase transition-colors duration-500 max-lg:my-4 max-lg:h5${className}`}
+      className={`base-bold text-p4 hover:text-p1 max-lg:h5 cursor-pointer uppercase transition-colors duration-500 max-lg:my-4 ${className}`}
       onClick={() => setIsOpen?.(false)}
     >
       {children}
