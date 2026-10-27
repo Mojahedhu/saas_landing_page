@@ -24,9 +24,10 @@ const FaqItem = ({ item, index }: FaqItemProps) => {
   return (
     <div className="relative z-2 mb-16">
       <button
+        id={`buttonId${id}`}
         type="button"
         aria-expanded={active}
-        aria-controls={id}
+        aria-controls={`panelId${id}`}
         onClick={toggle}
         className="group relative flex w-full cursor-pointer items-center justify-between gap-10 px-7 text-left"
       >
