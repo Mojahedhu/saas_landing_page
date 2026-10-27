@@ -1,4 +1,5 @@
 import NavLink from "./NavLink";
 import Button from "./Button";
 import { Marker } from "./Marker";
-export { NavLink, Button, Marker };
+import FaqItem from "./FaqItem";
+export { NavLink, Button, Marker, FaqItem };

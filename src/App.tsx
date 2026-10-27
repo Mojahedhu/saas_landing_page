@@ -1,5 +1,5 @@
 import "./index.css";
-import { Header, Hero, Features, Pricing } from "./sections";
+import { Header, Hero, Features, Pricing, Faq } from "./sections";
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       <Hero />
       <Features />
       <Pricing />
+      <Faq />
     </main>
   );
 };
