@@ -163,7 +163,7 @@ export const testimonials = [
     id: "0",
     name: "Jessica Saunders",
     role: "Globalnomads",
-    avatarUrl: "/images/testimonials/jessica-saunders.png",
+    avatarUrl: "/images/testimonials/mark-erixon.png",
     comment:
       "Xora's customer support is second to none! They’re like my tech superheroes, always there when I need them.",
   },
@@ -187,7 +187,7 @@ export const testimonials = [
     id: "3",
     name: "Alicia Barker",
     role: "Cyberleap",
-    avatarUrl: "/images/testimonials/alicia-barker.png",
+    avatarUrl: "/images/testimonials/jim-bradley.png",
     comment:
       "The analytics feature is like having a personal fortune teller. It's been instrumental in guiding our business decisions.",
   },
@@ -195,7 +195,7 @@ export const testimonials = [
     id: "4",
     name: "Becky Snider",
     role: "Floclips",
-    avatarUrl: "/images/testimonials/becky-snider.png",
+    avatarUrl: "/images/testimonials/jim-bradley.png",
     comment:
       "Switched to Xora last month, and I'm already seeing results. Best decision for our team!",
   },
