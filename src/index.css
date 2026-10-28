@@ -344,17 +344,18 @@
 }
 
 @utility testimonials_group-after {
-  @apply after:rounded-half after:border-s5 after:bg-s1 after:pointer-events-none after:absolute after:-bottom-[212px] after:left-[calc(50%-5px)] after:z-2 after:size-2.5 after:border-2 after:content-[''] max-lg:after:-bottom-[102px] max-md:after:hidden;
+  @apply after:rounded-half after:border-s5 after:bg-s1 after:pointer-events-none after:absolute after:-bottom-53 after:left-[calc(50%-5px)] after:z-2 after:size-2.5 after:border-2 after:content-[''] max-lg:after:-bottom-25.5 max-md:after:hidden;
 }
+
 /* ---------- END of Testimonials ---------- */
 
 /* ---------- START of Download ---------- */
 @utility download_tech-link_last-before {
-  @apply last:before:bg-s5 last:relative last:before:pointer-events-none last:before:absolute last:before:top-[calc(50%-1px)] last:before:left-full last:before:mr-6 last:before:h-0.5 last:before:w-[140px] last:before:content-[''] last:before:max-xl:w-[105px] last:before:max-lg:w-[80px] last:before:max-md:hidden;
+  @apply last:before:bg-s5 last:relative last:before:pointer-events-none last:before:absolute last:before:top-[calc(50%-1px)] last:before:left-full last:before:mr-6 last:before:h-0.5 last:before:w-35 last:before:content-[''] last:before:max-xl:w-26.25 last:before:max-lg:w-20 last:before:max-md:hidden;
 }
 
 @utility download_tech-link_last-after {
-  @apply last:after:rounded-half last:after:border-s5 last:after:bg-s1 last:after:pointer-events-none last:after:absolute last:after:top-[calc(50%-5px)] last:after:left-[223px] last:after:z-2 last:after:size-2.5 last:after:border-2 last:after:content-[''] last:after:max-xl:left-[187px] last:after:max-lg:left-[163px] last:after:max-md:hidden;
+  @apply last:after:rounded-half last:after:border-s5 last:after:bg-s1 last:after:pointer-events-none last:after:absolute last:after:top-[calc(50%-5px)] last:after:left-55.75 last:after:z-2 last:after:size-2.5 last:after:border-2 last:after:content-[''] last:after:max-xl:left-46.75 last:after:max-lg:left-40.75 last:after:max-md:hidden;
 }
 
 @utility download_tech-icon {

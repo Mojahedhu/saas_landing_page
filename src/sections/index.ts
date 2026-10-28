@@ -3,4 +3,6 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
-export { Header, Hero, Features, Pricing, Faq };
+import Testimonials from "./Testimonials";
+import Download from "./Download";
+export { Header, Hero, Features, Pricing, Faq, Testimonials, Download };

@@ -79,7 +79,7 @@ const Header = () => {
 
                 <li className="nav-li">
                   <NavLink
-                    to=""
+                    to="faq"
                     setIsOpen={setIsOpen}
                     children="faq"
                     activeClass="nav-active"
@@ -87,7 +87,7 @@ const Header = () => {
                   />
                   <div className="dot" />
                   <NavLink
-                    to=""
+                    to="download"
                     setIsOpen={setIsOpen}
                     children="download"
                     activeClass="nav-active"
