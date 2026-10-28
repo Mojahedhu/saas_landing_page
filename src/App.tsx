@@ -7,11 +7,12 @@ import {
   Faq,
   Testimonials,
   Download,
+  Footer,
 } from "./sections";
 
 const App = () => {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-clip">
       <Header />
       <Hero />
       <Features />
@@ -19,6 +20,7 @@ const App = () => {
       <Faq />
       <Testimonials />
       <Download />
+      <Footer />
     </main>
   );
 };

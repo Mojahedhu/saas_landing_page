@@ -5,4 +5,5 @@ import Pricing from "./Pricing";
 import Faq from "./Faq";
 import Testimonials from "./Testimonials";
 import Download from "./Download";
-export { Header, Hero, Features, Pricing, Faq, Testimonials, Download };
+import Footer from "./Footer";
+export { Header, Hero, Features, Pricing, Faq, Testimonials, Download, Footer };
