@@ -9,7 +9,7 @@ const Testimonials = () => {
       <div className="container block lg:flex">
         <div className="testimonials_head-res relative z-2 flex-300 lg:sticky lg:top-10 lg:mr-20 lg:min-w-75 lg:self-start">
           <p className="caption mb-5 max-md:mb-2.5">Wall of love</p>
-          <p className="h3 max-md:h5 text-p4">Words from out fans</p>
+          <p className="h3 max-md:h5 text-p4">Words from our fans</p>
         </div>
 
         <div className="testimonials_inner-after testimonials_inner-before relative -my-12 -mr-3 flex items-start max-lg:static max-md:block">

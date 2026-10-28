@@ -11,7 +11,7 @@ const Download = () => {
       >
         <div className="container">
           <div className="flex items-center">
-            <div className="relative mr-6 shrink-0 grow-0 basis-135 max-xl:basis-70 max-lg:basis-[256px] max-md:basis-100">
+            <div className="relative mr-6 shrink-0 grow-0 basis-135 max-xl:basis-70 max-lg:basis-[256px] max-md:mr-0 max-md:basis-full">
               <div className="mb-10">
                 <img
                   src="/images/xora.svg"
@@ -27,13 +27,14 @@ const Download = () => {
               </p>
 
               <ul className="flex flex-wrap items-center gap-6">
-                {links.map(({ id, url, icon }) => (
+                {links.map(({ id, title, url, icon }) => (
                   <li
                     key={"line" + id}
                     className="download_tech-link download_tech-link_last-before download_tech-link_last-after"
                   >
                     <a
                       href={url}
+                      aria-label={title}
                       className="download_tech-icon_before border-s3 rounded-half bg-s1 transition-borderColor relative flex size-22 items-center justify-center border-2 duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
