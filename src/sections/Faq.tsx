@@ -31,13 +31,13 @@ const Faq = () => {
             "-=0.4",
           );
         // Left column slides from left, right column from right — both batched
-        gsap.set(".faq-col-left .faq-item", { autoAlpha: 0, x: -40 });
-        gsap.set(".faq-col-right .faq-item", { autoAlpha: 0, x: 40 });
+        gsap.set(".faq-col-left .faq-item", { opacity: 0, x: -40 });
+        gsap.set(".faq-col-right .faq-item", { opacity: 0, x: 40 });
         ScrollTrigger.batch(".faq-col-left .faq-item", {
           onEnter: (batch) =>
             ctx.add(() =>
               gsap.to(batch, {
-                autoAlpha: 1,
+                opacity: 1,
                 x: 0,
                 duration: 0.7,
                 stagger: 0.1,
@@ -52,7 +52,7 @@ const Faq = () => {
           onEnter: (batch) =>
             ctx.add(() =>
               gsap.to(batch, {
-                autoAlpha: 1,
+                opacity: 1,
                 x: 0,
                 duration: 0.7,
                 stagger: 0.1,
@@ -98,7 +98,7 @@ const Faq = () => {
                   key={`faq-${item.id}`}
                   item={item}
                   index={index}
-                  className="faq-item"
+                  className="faq-item focus-within:opacity-100"
                 />
               ))}
             </div>
@@ -109,7 +109,7 @@ const Faq = () => {
                   key={`faq-${item.id}`}
                   item={item}
                   index={index + halfLength}
-                  className="faq-item"
+                  className="faq-item focus-within:opacity-100"
                 />
               ))}
             </div>

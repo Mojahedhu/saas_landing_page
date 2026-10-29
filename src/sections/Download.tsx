@@ -16,16 +16,7 @@ const Download = () => {
         // ✅ Left content — single timeline with ST on the timeline
         gsap.set(".download-logo", { autoAlpha: 0, y: -60 });
         gsap.set(".download-body", { autoAlpha: 0, y: 20 });
-        gsap.set(".download-link", { autoAlpha: 0, scale: 0.7, y: 20 });
-        // const contentTl = gsap.timeline({
-        //   scrollTrigger: {
-        //     trigger: ".download-content",
-        //     start: "top 80%",
-        //     once: true,
-        //   },
-        //   defaults: { ease: "power3.out" },
-        // });
-        // contentTl
+        gsap.set(".download-link", { opacity: 0, scale: 0.7, y: 20 });
 
         gsap.to(".download-logo", {
           scrollTrigger: {
@@ -57,7 +48,7 @@ const Download = () => {
             once: true,
           },
 
-          autoAlpha: 1,
+          opacity: 1,
           scale: 1,
           y: 0,
           duration: 0.5,
