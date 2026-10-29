@@ -8,10 +8,10 @@ const Footer = () => {
           <div className="small-compact flex flex-1 flex-wrap items-center justify-center gap-5">
             <p className="opacity-70">&copy; MH Dev</p>
             <div className="flex items-center justify-center sm:ml-auto">
-              <p className="legal-after text-p5 hover:text-p1 relative mr-9 transition-all duration-500">
+              <p className="legal-after text-p5 hover:text-p1 relative mr-9 cursor-pointer transition-all duration-500 hover:underline">
                 Privacy Policy
               </p>
-              <p className="text-p5 hover:text-p1 transition-all duration-500">
+              <p className="text-p5 hover:text-p1 cursor-pointer transition-all duration-500 hover:underline">
                 Terms of use
               </p>
             </div>

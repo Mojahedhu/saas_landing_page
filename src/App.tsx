@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import "./index.css";
 import {
   Header,
@@ -9,6 +10,9 @@ import {
   Download,
   Footer,
 } from "./sections";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
