@@ -15,7 +15,7 @@ const Footer = () => {
         const legalTl = gsap.timeline({
           scrollTrigger: {
             trigger: footerRef.current,
-            start: "top 95%",
+            start: "top bottom",
             once: true,
           },
           defaults: { ease: "power2.out" },
@@ -36,7 +36,7 @@ const Footer = () => {
                 overwrite: true,
               }),
             ),
-          start: "top 95%",
+          start: "top bottom",
           once: true,
         });
       });
