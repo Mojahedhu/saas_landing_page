@@ -10,9 +10,10 @@ interface Item {
 interface FaqItemProps {
   item: Item;
   index: number;
+  className?: string;
 }
 
-const FaqItem = ({ item, index }: FaqItemProps) => {
+const FaqItem = ({ item, index, className = "" }: FaqItemProps) => {
   const { id, question, answer } = item;
   const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -22,7 +23,7 @@ const FaqItem = ({ item, index }: FaqItemProps) => {
     setActiveId(activeId === id ? null : id);
   };
   return (
-    <div className="relative z-2 mb-16">
+    <div className={clsx("relative z-2 mb-16", className)}>
       <button
         id={`buttonId${id}`}
         type="button"
