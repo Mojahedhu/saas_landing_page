@@ -1,9 +1,12 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Element } from "react-scroll";
 import { plans } from "../constants";
 import _CountUp from "react-countup";
 import { Button } from "../components";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const CountUp = (
   "default" in _CountUp ? _CountUp.default : _CountUp
@@ -11,11 +14,75 @@ const CountUp = (
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", (ctx) => {
+        // ✅ ScrollTrigger goes on the TIMELINE, not on a child tween
+        const headTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".pricing-heading",
+            start: "top 85%",
+            once: true,
+          },
+          defaults: { ease: "power3.out" },
+        });
+        headTl.from(".pricing-heading", { opacity: 0, y: 40, duration: 0.9 });
+        // ✅ Batch the plan cards — handles stagger across all three cleanly
+
+        // 1. Set initial state immediately so they don't pop in before scrolling
+        gsap.set(".pricing-card", { opacity: 0, y: 80 });
+
+        ScrollTrigger.batch(".pricing-card", {
+          onEnter: (batch) =>
+            ctx.add(() =>
+              gsap.to(batch, {
+                opacity: 1,
+                y: 0,
+                duration: 0.85,
+                stagger: { amount: 0.4 },
+                ease: "power3.out",
+                overwrite: "auto",
+              }),
+            ),
+          start: "top 80%",
+          once: true,
+        });
+        // Subtle repeating glow on the featured (middle) card only
+        const glowTween = gsap.to(".pricing-card-featured", {
+          boxShadow: "0 0 40px 8px rgba(46,242,255,0.18)",
+          scale: 1.02,
+          repeat: -1,
+          yoyo: true,
+          duration: 2.2,
+          ease: "sine.inOut",
+          paused: true,
+        });
+
+        ScrollTrigger.create({
+          trigger: ".pricing-card-featured",
+          start: "top bottom",
+          end: "bottom top",
+          onEnter: () => glowTween.resume(),
+          onLeave: () => glowTween.pause(),
+          onEnterBack: () => glowTween.resume(),
+          onLeaveBack: () => glowTween.pause(),
+        });
+      });
+      return () => {
+        mm.revert();
+      };
+    },
+    { scope: sectionRef },
+  );
+
   return (
-    <section>
+    <section ref={sectionRef}>
       <Element name="pricing">
         <div className="container">
-          <div className="pricing-head_before border-s2 bg-s1/50 relative mx-auto max-w-960 border-r border-l pt-28 pb-40 max-xl:max-w-4xl max-lg:border-none max-md:pt-16 max-md:pb-32">
+          <div className="pricing-heading pricing-head_before border-s2 bg-s1/50 relative mx-auto max-w-960 border-r border-l pt-28 pb-40 max-xl:max-w-4xl max-lg:border-none max-md:pt-16 max-md:pb-32">
             <h3 className="h3 max-lg:h4 max-md:h5 text-p4 relative z-3 mx-auto mb-14 max-w-lg text-center max-md:mb-11 max-sm:max-w-sm">
               Flexible pricing for teams of all sizes
             </h3>
@@ -84,7 +151,10 @@ const Pricing = () => {
               ) => (
                 <div
                   key={"plan" + id}
-                  className="pricing-plan_first pricing-plan_last pricing-plan_even pricing-plan_odd xl:w-[calc(33.33% + 2px)] relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl"
+                  className={clsx(
+                    "pricing-card pricing-plan_first pricing-plan_last pricing-plan_even pricing-plan_odd xl:w-[calc(33.33% + 2px)] relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl",
+                    index === 1 && "pricing-card-featured relative z-1",
+                  )}
                 >
                   {index === 1 && (
                     <div className="g4 absolute top-0 right-0 left-0 z-1 h-330 rounded-tl-3xl rounded-tr-3xl" />

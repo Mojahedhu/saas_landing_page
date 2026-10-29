@@ -55,13 +55,23 @@ const Hero = () => {
             );
           // Continuous float bob — skip for reduced motion users
           if (!reduced) {
-            gsap.to("#hero-image", {
-              y: -18,
-              duration: 3.5,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 1.5,
+            tl.add(() => {
+              gsap.fromTo(
+                "#hero-image",
+                {
+                  y: 0,
+                  scale: 1,
+                },
+                {
+                  y: -18,
+                  scale: 1.05,
+                  duration: 3.5,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: "sine.inOut",
+                  immediateRender: false,
+                },
+              );
             });
           }
         },
