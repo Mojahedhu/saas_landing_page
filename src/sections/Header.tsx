@@ -1,8 +1,11 @@
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "../components";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Header = () => {
+  const headerRef = useRef<HTMLDivElement | null>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,8 +18,39 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // ✅ GSAP mount animation via useGSAP — auto-cleanup on unmount
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add(
+        "(prefers-reduced-motion: no-preference) and (min-width: 1024px)",
+        () => {
+          const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            delay: 0.1,
+          });
+          tl.from("#header-logo", {
+            autoAlpha: 0,
+            scale: 0.3,
+            duration: 0.7,
+          }).from(
+            ".header-nav-item",
+            { autoAlpha: 0, y: -14, stagger: 0.1, duration: 0.55 },
+            "-=0.4",
+          );
+        },
+      );
+      return () => {
+        mm.revert();
+      };
+    },
+    { scope: headerRef },
+  );
+
   return (
     <header
+      ref={headerRef}
       className={clsx(
         "fixed top-0 left-0 z-50 w-full transition-all duration-500",
         hasScrolled
@@ -31,7 +65,13 @@ const Header = () => {
           setIsOpen={setIsOpen}
           className="z-2 flex-1 cursor-pointer lg:hidden"
         >
-          <img src="/images/xora.svg" alt="logo" height={55} width={115} />
+          <img
+            id="header-logo"
+            src="/images/xora.svg"
+            alt="logo"
+            height={55}
+            width={115}
+          />
         </NavLink>
         <div
           className={clsx(
@@ -42,7 +82,7 @@ const Header = () => {
           <div className="sidebar-before max-lg:relative max-lg:flex max-lg:min-h-screen max-lg:flex-col max-lg:overflow-hidden max-lg:p-6 max-md:px-4">
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
-                <li className="nav-li">
+                <li className="nav-li header-nav-item">
                   <NavLink
                     to={"features"}
                     setIsOpen={setIsOpen}
@@ -60,7 +100,7 @@ const Header = () => {
                   />
                 </li>
 
-                <li className="nav-logo">
+                <li className="nav-logo header-nav-item">
                   <NavLink
                     to="hero"
                     offset={-250}
@@ -77,7 +117,7 @@ const Header = () => {
                   </NavLink>
                 </li>
 
-                <li className="nav-li">
+                <li className="nav-li header-nav-item">
                   <NavLink
                     to="faq"
                     setIsOpen={setIsOpen}
