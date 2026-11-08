@@ -39,7 +39,7 @@
 - [🎬 Animations](#-animations)
 - [📦 Scripts](#-scripts)
 - [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [📄 Footer](#-Footer)
 
 ---
 
@@ -58,16 +58,16 @@
 
 ## 🌟 Features
 
-| Feature | Details |
-|---|---|
-| 🏠 **Hero Section** | GSAP-animated entrance with floating hero image |
-| ⚡ **Features Section** | Scroll-triggered batch card reveals with detail icons |
-| 💲 **Pricing Section** | Interactive monthly/annual toggle with animated CountUp prices and a glowing featured card |
-| ❓ **FAQ Section** | Two-column accordion layout with slide-in animations |
-| 💬 **Testimonials** | Sticky heading + batched card reveals across two columns |
-| 📥 **Download Section** | Multi-platform download links (iOS, Android, Windows, Web) with partner logos |
-| 🧭 **Sticky Header** | Transparent → frosted-glass on scroll with responsive hamburger menu |
-| 🦶 **Footer** | Social links (X, Threads, Instagram, Discord) with spring-pop animations |
+| Feature                 | Details                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| 🏠 **Hero Section**     | GSAP-animated entrance with floating hero image                                            |
+| ⚡ **Features Section** | Scroll-triggered batch card reveals with detail icons                                      |
+| 💲 **Pricing Section**  | Interactive monthly/annual toggle with animated CountUp prices and a glowing featured card |
+| ❓ **FAQ Section**      | Two-column accordion layout with slide-in animations                                       |
+| 💬 **Testimonials**     | Sticky heading + batched card reveals across two columns                                   |
+| 📥 **Download Section** | Multi-platform download links (iOS, Android, Windows, Web) with partner logos              |
+| 🧭 **Sticky Header**    | Transparent → frosted-glass on scroll with responsive hamburger menu                       |
+| 🦶 **Footer**           | Social links (X, Threads, Instagram, Discord) with spring-pop animations                   |
 
 ---
 
@@ -132,18 +132,18 @@ saas_landing_page/
 
 ## ⚙️ Tech Stack
 
-| Category | Technology | Version |
-|---|---|---|
-| **Framework** | React | 19.3 |
-| **Language** | TypeScript | ~6.0 |
-| **Styling** | Tailwind CSS | v4.3 |
-| **Animation** | GSAP + @gsap/react | 3.15 |
-| **Build Tool** | Vite | 8.3 |
-| **Routing/Scroll** | react-scroll | 1.9 |
-| **Counter** | react-countup | 6.5 |
-| **Utilities** | clsx | 2.1 |
-| **Compiler** | React Compiler (Babel) | 1.0 |
-| **Package Manager** | pnpm | — |
+| Category            | Technology             | Version |
+| ------------------- | ---------------------- | ------- |
+| **Framework**       | React                  | 19.3    |
+| **Language**        | TypeScript             | ~6.0    |
+| **Styling**         | Tailwind CSS           | v4.3    |
+| **Animation**       | GSAP + @gsap/react     | 3.15    |
+| **Build Tool**      | Vite                   | 8.3     |
+| **Routing/Scroll**  | react-scroll           | 1.9     |
+| **Counter**         | react-countup          | 6.5     |
+| **Utilities**       | clsx                   | 2.1     |
+| **Compiler**        | React Compiler (Babel) | 1.0     |
+| **Package Manager** | pnpm                   | —       |
 
 ---
 
@@ -154,7 +154,7 @@ saas_landing_page/
 Ensure you have the following installed:
 
 - **Node.js** `>= 18`
-- **pnpm** `>= 8` *(recommended)* — or npm / yarn
+- **pnpm** `>= 8` _(recommended)_ — or npm / yarn
 
 ```bash
 # Install pnpm globally if you don't have it
@@ -202,66 +202,73 @@ The entire design system is defined in `src/index.css` using **Tailwind CSS v4's
 
 ### Color Palette
 
-| Token | Hex | Usage |
-|---|---|---|
+| Token        | Hex       | Usage                                |
+| ------------ | --------- | ------------------------------------ |
 | `--color-p1` | `#2ef2ff` | Primary cyan — CTA highlights, icons |
-| `--color-p2` | `#3c52d9` | Deep blue — accents |
-| `--color-p3` | `#c8ea80` | Lime green — featured plan, badges |
-| `--color-p4` | `#eaedff` | Near-white — headings, body text |
-| `--color-p5` | `#c4cbf5` | Muted lavender — secondary text |
-| `--color-s1` | `#080d27` | Dark navy — page background |
-| `--color-s2` | `#0c1838` | Card background |
-| `--color-s3` | `#334679` | Borders, dividers |
-| `--color-s4` | `#1959ad` | Interactive borders |
-| `--color-s5` | `#263466` | Subtle overlays |
+| `--color-p2` | `#3c52d9` | Deep blue — accents                  |
+| `--color-p3` | `#c8ea80` | Lime green — featured plan, badges   |
+| `--color-p4` | `#eaedff` | Near-white — headings, body text     |
+| `--color-p5` | `#c4cbf5` | Muted lavender — secondary text      |
+| `--color-s1` | `#080d27` | Dark navy — page background          |
+| `--color-s2` | `#0c1838` | Card background                      |
+| `--color-s3` | `#334679` | Borders, dividers                    |
+| `--color-s4` | `#1959ad` | Interactive borders                  |
+| `--color-s5` | `#263466` | Subtle overlays                      |
 
 ### Typography
 
-| Font | Use |
-|---|---|
+| Font        | Use                                   |
+| ----------- | ------------------------------------- |
 | **Poppins** | Headings, buttons — geometric, strong |
-| **Inter** | Body copy — readable, modern |
+| **Inter**   | Body copy — readable, modern          |
 
 ### Shadows
 
-| Token | Effect |
-|---|---|
+| Token        | Effect                                 |
+| ------------ | -------------------------------------- |
 | `shadow-100` | Deep card shadows with inset blue glow |
-| `shadow-200` | Elevated elements with cyan inset |
-| `shadow-500` | Multi-layer dark + indigo ambient |
+| `shadow-200` | Elevated elements with cyan inset      |
+| `shadow-500` | Multi-layer dark + indigo ambient      |
 
 ---
 
 ## 📐 Page Sections
 
 ### 🏠 Hero
+
 The entry point of the page. Features an animated headline with skew entrance, body text fade, CTA button scale-in, and a large hero image that floats continuously using a `sine.inOut` yoyo tween.
 
 ### ⚡ Features
+
 Two feature cards (Easy Integration · Secure & Trustworthy) with a bottom row of four detail icons:
+
 - 🎬 AI Automated Video Editing
 - 👥 Collaborate with your Team
 - ☁️ Ultra Fast Cloud-Engine
 - 🕐 24/7 Customer Support
 
 ### 💰 Pricing
+
 Three flexible plans with an **animated billing toggle**:
 
-| Plan | Monthly | Annual |
-|---|---|---|
-| Core *(Solo creators)* | \$19/mo | \$12/mo |
-| Overdrive *(Most popular)* | \$79/mo | \$59/mo |
-| Team *(For teams)* | \$39/mo | \$29/mo |
+| Plan                       | Monthly | Annual  |
+| -------------------------- | ------- | ------- |
+| Core _(Solo creators)_     | \$19/mo | \$12/mo |
+| Overdrive _(Most popular)_ | \$79/mo | \$59/mo |
+| Team _(For teams)_         | \$39/mo | \$29/mo |
 
 Prices animate via `react-countup` on toggle. The featured **Overdrive** card emits a repeating cyan glow while in viewport.
 
 ### ❓ FAQ
+
 Ten frequently asked questions split across two columns with GSAP slide-in from opposite directions on scroll.
 
 ### 💬 Testimonials
+
 Six user testimonials from companies like Globalnomads, Cyberleap, and Floclips — arranged in a two-column staggered grid with a sticky left heading.
 
 ### 📥 Download
+
 Multi-platform availability with icon links for **iOS**, **Android**, **Windows**, and **Web**, plus a macOS-style app preview window and logos of partner companies: Afterpay, Amplitude, Sonos, Maze, and Drips.
 
 ---
@@ -305,6 +312,7 @@ Multi-platform availability with icon links for **iOS**, **Android**, **Windows*
 ## 🧩 Components
 
 ### `<Button />`
+
 A polymorphic CTA button that renders as `<a>` or `<button>` depending on props. Features a gradient border, inner glow, `<Marker>` accent, and icon support.
 
 ```tsx
@@ -313,18 +321,23 @@ A polymorphic CTA button that renders as `<a>` or `<button>` depending on props.
 ```
 
 ### `<NavLink />`
+
 Wraps `react-scroll`'s `Link` component with active state management and mobile menu close handling.
 
 ### `<FaqItem />`
+
 Accordion-style FAQ item using the `<SlideDown>` animation component for height transitions.
 
 ### `<TestimonialItem />`
+
 Renders a user testimonial with avatar, name, role, and quoted comment.
 
 ### `<Marker />`
+
 An SVG decorative bracket marker used in buttons and download links as a visual flourish.
 
 ### `<SlideDown />`
+
 A height-animating wrapper using CSS `grid` rows from `0fr → 1fr` for smooth expand/collapse.
 
 ---
@@ -333,27 +346,27 @@ A height-animating wrapper using CSS `grid` rows from `0fr → 1fr` for smooth e
 
 All animations are built with **GSAP 3** and follow production best practices:
 
-| Practice | Implementation |
-|---|---|
-| ♿ Reduced Motion | `gsap.matchMedia()` with `prefers-reduced-motion` — durations set to `0` for users who prefer no motion |
-| 🧹 Cleanup | All `matchMedia` instances call `.revert()` on component unmount via `useGSAP` |
-| 🎯 Scoped Selectors | `useGSAP({ scope: ref })` prevents selector leaks between components |
-| 🏎️ Batch Scroll | `ScrollTrigger.batch()` used for all card groups — one `ScrollTrigger` per element, callbacks batched for performance |
-| ⏱️ Timeline Defaults | `gsap.timeline({ defaults: { ease, duration } })` avoids repeating per-tween config |
-| 📍 Position Parameters | `"-=0.4"` and `"<0.2"` overlap syntax instead of `delay` for tight choreography |
-| 👁️ autoAlpha | Used over `opacity` to also manage `visibility`, preventing invisible elements from capturing pointer events |
-| 🔂 `once: true` | Entrance-only `ScrollTrigger` instances self-kill after firing to free memory |
+| Practice               | Implementation                                                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| ♿ Reduced Motion      | `gsap.matchMedia()` with `prefers-reduced-motion` — durations set to `0` for users who prefer no motion               |
+| 🧹 Cleanup             | All `matchMedia` instances call `.revert()` on component unmount via `useGSAP`                                        |
+| 🎯 Scoped Selectors    | `useGSAP({ scope: ref })` prevents selector leaks between components                                                  |
+| 🏎️ Batch Scroll        | `ScrollTrigger.batch()` used for all card groups — one `ScrollTrigger` per element, callbacks batched for performance |
+| ⏱️ Timeline Defaults   | `gsap.timeline({ defaults: { ease, duration } })` avoids repeating per-tween config                                   |
+| 📍 Position Parameters | `"-=0.4"` and `"<0.2"` overlap syntax instead of `delay` for tight choreography                                       |
+| 👁️ autoAlpha           | Used over `opacity` to also manage `visibility`, preventing invisible elements from capturing pointer events          |
+| 🔂 `once: true`        | Entrance-only `ScrollTrigger` instances self-kill after firing to free memory                                         |
 
 ---
 
 ## 📦 Scripts
 
-| Command | Description |
-|---|---|
-| `pnpm dev` | Start the Vite dev server with HMR |
-| `pnpm build` | Type-check with `tsc` then produce a production bundle |
-| `pnpm preview` | Locally serve the `dist/` production build |
-| `pnpm lint` | Run ESLint across the entire project |
+| Command        | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| `pnpm dev`     | Start the Vite dev server with HMR                     |
+| `pnpm build`   | Type-check with `tsc` then produce a production bundle |
+| `pnpm preview` | Locally serve the `dist/` production build             |
+| `pnpm lint`    | Run ESLint across the entire project                   |
 
 ---
 
@@ -371,8 +384,12 @@ Please ensure all code passes `pnpm lint` and `pnpm build` before submitting.
 
 ---
 
-## 📄 License
+## 📄 Footer
 
-© MH Dev. All rights reserved.
+Create by MH Dev
 
-> Built with ❤️ using React, GSAP, and Tailwind CSS v4.
+<div align=center>
+ Built with ❤️ using React, GSAP, and Tailwind CSS v4.
+ <br />
+ Thanks for JS Mastery.
+</div>
